@@ -1,0 +1,36 @@
+Introduction:
+In this project, Harshit Melani In this project i have developed a machine learning model to predict house prices based on various features such as the number of bedrooms, bathrooms, square footage, location, and other relevant attributes. The project's goal was to create a model that can accurately estimate house prices and assist in property valuation. The project involved data preprocessing, model training, evaluation, and the creation of a Graphical User Interface (GUI) for real-time price predictions.
+
+Methods:
+
+Data Preprocessing:
+
+Imported required libraries: Pandas, Matplotlib, Seaborn, NumPy, Ipywidgets.
+Loaded the dataset 'bhd.csv' using Pandas.
+Explored the dataset's structure using .head() and .info() methods.
+Checked for missing values using .isnull().sum() and handled them by removing or imputing data.
+Dropped irrelevant columns ('society', 'balcony', 'area_type').
+Feature Engineering:
+
+Created a new feature 'bhk' based on the 'size' column to extract the number of bedrooms.
+Processed the 'total_sqft' column to convert ranges into average values.
+Outlier Removal:
+
+Eliminated outliers by applying domain knowledge to remove unrealistic data points.
+Used the standard deviation method to filter out prices per square foot that deviated significantly from the mean.
+Model Training:
+
+Split the dataset into features (X) and target variable (y).
+Utilized Linear Regression as the model to predict house prices.
+Evaluated the model's performance using R-squared score and cross-validation.
+Model Deployment:
+
+Created a function price_pre() to predict prices based on input features.
+Pickled the trained model using the pickle library.
+Generated a JSON file ('columns.json') to store the names of the features for use in the GUI.
+Creating a GUI for Predictions:
+
+Utilized the tkinter library to build a GUI for real-time price predictions.
+Loaded the pre-trained Linear Regression model and feature names.
+Designed input fields for location, square footage, bathrooms, and bedrooms.
+Implemented a prediction function to provide predicted house prices based on user input.
